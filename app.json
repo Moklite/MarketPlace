@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "MarketPlace",
-    "slug": "MarketPlace",
+    "name": "BulkAfrica",
+    "slug": "bulkafrica",
     "version": "1.0.0",
+    "scheme": "bulkafrica",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,17 +14,31 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.base44.bulkafrica",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.base44.bulkafrica"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "owner": "moklite",
+    "plugins": [
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "824d3d7b-a1c5-4cc5-bad7-7d45f236ad28"
+      }
     }
   }
 }
