@@ -34,7 +34,7 @@ export default function App() {
           if (token && webViewRef.current) {
             // Determine cookie name - default 'token', assuming backend sets this
             const cookieScript = `
-                    document.cookie = "token=${token}; path=/; domain=.base44.app; secure; samesite=lax";
+                    document.cookie = "token=${token}; path=/; domain=.marketmate.uk; secure; samesite=lax";
                     window.location.reload();
                 `;
             webViewRef.current.injectJavaScript(cookieScript);
@@ -85,7 +85,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <WebView
         ref={webViewRef}
-        source={{ uri: 'https://bulkafrica.base44.app/Home' }}
+        source={{ uri: 'https://marketmate.uk/' }}
         style={styles.webview}
         originWhitelist={['*']}
         onShouldStartLoadWithRequest={handleShouldStartLoadWithRequest}
